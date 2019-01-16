@@ -7,11 +7,11 @@
     <input type="text" readonly="" id="lotto_text"><input type="button" value="로또번호생성" onclick="Lotto()">
     <script type="text/javascript">
     function Lotto() {
-        var lotto = new Array(7); // 6개의 배열이 lotto에 저장
+        var lotto = new Array(6); // 6개의 배열이 lotto에 저장
         var count = 0; //추출한 로또번호의 갯수
         var overl = true; // 번호중복 여부 변수
  
-        while (count < 7) { // 로또번호 6번 얻을 때까지 반복.
+        while (count < 6) { // 로또번호 6번 얻을 때까지 반복.
             var number = 0; //랜덤번호 가져오는 변수
             number = parseInt(Math.random() * 45) + 1; // 1~45사이에 랜덤번호 추출
  
@@ -31,7 +31,7 @@
         var lotto_text = document.getElementById("lotto_text"); //입력폼 id 가져오기
  
         // 추첨된 로또번호 출력
-        lotto_text.value = lotto[0] + ', ' + lotto[1] + ', ' + lotto[2] + ', ' + lotto[3] + ', ' + lotto[4] + ', ' + lotto[5] + ', ' + lotto[6];
+        lotto_text.value = lotto[0] + ', ' + lotto[1] + ', ' + lotto[2] + ', ' + lotto[3] + ', ' + lotto[4] + ', ' + lotto[5];
     }
     </script>
 </body>
